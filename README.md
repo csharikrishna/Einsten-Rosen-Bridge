@@ -12,18 +12,25 @@ This project is a high-quality, interactive 3D web application that visualizes a
 
 ## How to Run
 
-To run this project locally, you need to serve the files on a local web server due to browser security policies regarding JavaScript modules (`file:///` URLs will not work).
+This project uses [Vite](https://vitejs.dev/) as a development server and build tool.
 
-1.  Make sure you have Python installed on your system.
-2.  Open your terminal or command prompt.
-3.  Navigate to the root directory where `index.html` is located.
-4.  Run the following command to start a simple web server:
-
+1.  Make sure you have [Node.js](https://nodejs.org/) installed (which includes npm).
+2.  Open your terminal and navigate to the project's root directory.
+3.  Install the necessary dependencies:
     ```bash
-    python -m http.server
+    npm install
     ```
+4.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+5.  Open your web browser and navigate to the local address provided by Vite (usually `http://localhost:5173`).
 
-5.  Open your web browser and navigate to the address `http://localhost:8000/`.
+## Asset Note
+
+The textures used for the nebulae, galaxies, and event horizon (`/public/assets/*.png`) are currently empty placeholder files. The original project generated these textures procedurally. For improved performance, the code has been refactored to load static images.
+
+To see the full visual effect, you will need to replace these placeholder files with actual images.
 
 ## Credits
 
