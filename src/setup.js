@@ -135,7 +135,7 @@ export function initScene() {
        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap for performance
        renderer.toneMapping = THREE.ACESFilmicToneMapping;
        renderer.toneMappingExposure = 1.2;
-       renderer.outputEncoding = THREE.sRGBEncoding;
+       renderer.outputColorSpace = THREE.SRGBColorSpace;
 
        // Memory optimization: pre-compute render targets
        renderer.initTexture = function(texture) {
@@ -190,9 +190,9 @@ export function initScene() {
 
        // ======== TEXTURE LOADER ========
        const textureLoader = new THREE.TextureLoader();
-       const nebulaTexture = textureLoader.load('/assets/nebula.png');
-       const galaxyTexture = textureLoader.load('/assets/galaxy.png');
-       const eventHorizonTexture = textureLoader.load('/assets/event-horizon.png');
+       const nebulaTexture = textureLoader.load('assets/nebula.png');
+       const galaxyTexture = textureLoader.load('assets/galaxy.png');
+       const eventHorizonTexture = textureLoader.load('assets/event-horizon.png');
        nebulaTexture.wrapS = THREE.RepeatWrapping;
        nebulaTexture.wrapT = THREE.RepeatWrapping;
 
